@@ -17,7 +17,7 @@
         var: disk_usage.stdout
 
 
-        - name: Install Geany
+    - name: Install Geany
       ansible.builtin.apt:
         name: geany
         state: present
