@@ -7,12 +7,12 @@
         update_cache: yes
         cache_valid_time: 3600
       changed_when: false
-      
-   - name: Create user 'testing'
+
+    - name: Create user 'testing'
       ansible.builtin.user:
         name: testing
         state: present
-    
+
 
 
    
