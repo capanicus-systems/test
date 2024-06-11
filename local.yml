@@ -5,3 +5,13 @@
     - name: Update apt package index
       ansible.builtin.apt:
         update_cache: yes
+        cache_valid_time: 3600
+      changed_when: false
+
+    - name: Check disk usage
+      ansible.builtin.command: df -h
+      register: disk_usage
+
+    - name: Display disk usage
+      ansible.builtin.debug:
+        var: disk_usage.stdout
