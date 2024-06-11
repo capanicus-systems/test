@@ -15,3 +15,9 @@
     - name: Display disk usage
       ansible.builtin.debug:
         var: disk_usage.stdout
+
+
+        - name: Install Geany
+      ansible.builtin.apt:
+        name: geany
+        state: present
